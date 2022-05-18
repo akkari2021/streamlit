@@ -220,7 +220,7 @@ def main():
            
           #Machine Learning Models
           choose_model = st.sidebar.selectbox("Choose the Machine Learning Model",
-		["None","Random Forest Classifier", "K-Nearest Neighbours", "Logistic Regression"])
+		["None","Random Forest Classifier", "K-Nearest Neighbors", "Logistic Regression"])
      
           #Accuracy with Random Forest Classifier
           if(choose_model == "Random Forest Classifier"):
@@ -267,12 +267,12 @@ def main():
                except:
                     pass
 
-          #Accuracy with K-Nearest Neighbours
-          if(choose_model == "K-Nearest Neighbours"):
+          #Accuracy with K-Nearest Neighbors
+          if(choose_model == "K-Nearest Neighbors"):
                score, report, conf, clf = Knn_Classifier(X_train, X_test, y_train, y_test)
 
                #show the accuracy score
-               st.text("Accuracy score test with K-Nearest Neighbours model is: ")
+               st.text("Accuracy score test with K-Nearest Neighbors model is: ")
                score = score*100
                res = "{:.2f}".format(score)
                st.write(res, "%")
